@@ -1,0 +1,260 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\def\mysep{$\hookrightarrow$ }
+\def\tb{\textbullet}
+
+% suppress hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\usepackage{graphbox}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Hoang-Ngan}{Nguyen}{ \hphantom{\small lala}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+\subsection{University of Arkansas}
+\descript{MS in Information System}
+\location{Expected Aug 2018 | Fayetteville, AR}% \\ Cum. GPA: N/A}
+\sectionsep
+
+\subsection{Tulane University}
+\descript{PhD in Applied Mathematics}
+\location{Graduated Aug 2012 | New Orleans, LA}% \\
+%Awards: LONI Institute Graduate Fellowships, IBM Corporation Fellowship in Computational Science, 5-year scholarship
+%Cum. GPA: 3.78 / 4.0} 
+\sectionsep
+
+\subsection{Hanoi University of} 
+\subsection{Technology}
+\descript{BS in Applied Mathematics}
+\location{Graduated May 2005 |  Hanoi, Vietnam}% \\ Cum. GPA: 8.63 / 10.0}
+%Award: First Prize of ``Scientific Research for Undergraduates''
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+\begin{tabular}{cl}
+  \includegraphics[align=c,width=3.2ex]{email.png} &
+  \href{mailto:zhoangngan@gmail.com}{zhoangngan@gmail.com}\\
+  \includegraphics[align=c,width=3.2ex]{phone.png} & 919-537-9397 \\
+\includegraphics[align=c,width=3.2ex]{github.png} & \href{https://github.com/hoangngan82}{{hoangngan82}} \\
+ \includegraphics[align=c,width=3.4ex]{twitter.png} &
+ \href{https://twitter.com/zhoangngan}{{@zhoangngan}} \\
+\ \ \includegraphics[align=c,width=4.2ex]{linkedin.eps} &
+ \href{https://www.linkedin.com/in/hoangngan82}{{hoangngan82}} 
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{University of Arkansas}
+Data Analytics Fundamentals \\
+ERP Fundamentals \\
+E Business Development \\
+Seminar in Systems Development \\
+\sectionsep
+
+\subsection{Tulane University}
+Analysis \tb{} Algebra \tb{} Topology \\
+Probability and Statistics \\
+Scientific Computing I \tb{} III \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills \small \mysep in development}
+\subsection{self-taught}
+\descript{Basic:} Linux \tb{}
+C \tb{} C++ \tb{} Shell \tb{} \LaTeX\ \\
+\descript{Novice:}  JavaScript \tb{} SQL \tb{} R \tb{} Matlab \tb{}
+Blockchain \tb{} Hyperledger Fabric \tb{} Machine Learning \tb{} Python \tb{}
+ Hyperledger Composer
+ \tb{} D3js \\ 
+\sectionsep
+
+\subsection{coursework}
+Blockchain \\
+Mainframe \tb{} z/OS \\
+Data Analytics \tb{} SQL \tb{} Python \\
+Project Management
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.63\textwidth} 
+
+\section{Profile}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+  \item Self-motivated and studious individual with strong interest in
+    data science seeking opportunities in data science.
+  \item Strong mathematical background and strong technical skills
+  \item Proven leadership and teamwork abilities gained through teaching experience and professional collaboration with faculty and researchers
+  \item Excellent verbal and written communication skills; communicate clearly, effectively, and professionally in both English and Vietnamese
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Colorado School of Mines}
+\descript{ \mysep  Research Associate}
+\location{ Oct 2016 – Aug 2017 | Golden, CO}
+\begin{tightemize}
+  \item Developed computational methods for modeling fluid flows through porous material such as blood vessels
+  \item Implemented computational methods in  Julia programming language
+\end{tightemize}
+\sectionsep
+ 
+\runsubsection{University of California - Merced}
+  \descript{\mysep Postdoc}
+  \location{Aug 2013 - Aug 2016 | Merced, CA}
+  \begin{tightemize}
+    \item Designed new computational methods for periodic flows
+    \item Utilized CUDA technology to develop parallel computer codes
+    \item Taught 2 upper-division courses in Numerical Analysis and Partial Differential Equations
+  \end{tightemize}
+\sectionsep
+
+\runsubsection{Tulane University}
+\descript{\mysep Postdoc}
+\location{Sep 2012 - Jun 2013 | New Orleans, LA}
+\begin{tightemize}
+  \item Analyzed and improved accuracy for method of regularized Stokeslets
+  \item Wrote computer codes in Matlab and C++
+\end{tightemize}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Projects \small \mysep class projects in the MIS program}
+\vspace{\topsep}
+\begin{tightemize}
+\item Apply DAD methodology to manage and develop Basic Inventory Management
+  system for a fictitious retailer
+\item Develop a blockchain network using the Hyperledger Fabric
+  platform and a webpage to interact with this network through REST API
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%       AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards}
+%\vspace{\topsep}
+\begin{tabular}[h]{ll}
+  2017 -- 2018 & Full scholarship to the MIS program (7/92 applicants)\\
+  2011 -- 2012 & LONI Institute Graduate Fellowship\\
+  2011 -- 2012 & IBM Corporation Fellowship in Computational Sciences
+\end{tabular}
+\sectionsep
+
+\section{Additional Experience}
+\vspace{\topsep}
+\begin{tightemize}
+\item Designed and implemented a computer program, running in Linux, to
+  help prevent Repetitive Strain Injury and to protect eyes
+\item Taught undergraduate classes in Calculus, Linear Algebra, and Business Statistics
+\item Reviewed papers for Journal of Mechanics of Material and Structures, and Physics Letter A
+\item Organized a mini-symposium at SIAM CSE 
+  conference 2015
+\item Delivered 9 presentations at scientific conferences and workshops
+\item Co-published 4 scientific papers
+\end{tightemize}
+%\sectionsep
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
